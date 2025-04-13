@@ -2,12 +2,38 @@ package views;
 
 import data.Persistencia;
 import domain.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import java.util.ArrayList;
 import java.util.InvalidPropertiesFormatException;
 import java.util.List;
 
-public class Controlador {
+public class Controlador implements ActionListener {
+    private MenuPrincipal mp = new MenuPrincipal();
+    
+      @Override
+    public void actionPerformed(ActionEvent e) {
+       if(e.getActionCommand().equals(mp.OPC_GUARDAR)){
+           System.out.println("Opcion guardar animal"); 
+       }
+       
+       if(e.getActionCommand().equals(mp.OPC_LISTAR)){
+           System.out.println("Opciona listar animales");
+       }
+       
+       if(e.getActionCommand().equals(mp.OPC_CALCULAR)){
+           System.out.println("Opcion calcular alimentos");
+       }
+    }
+    
+    public void ejecutar(){
+     mp.setControlador(this);
+     mp.ejecutar();
+    }
+    
+    
+    
     public static TipoAlimentacion[] getTiposAlimentacion(){
         return  TipoAlimentacion.values();
     }
@@ -31,4 +57,6 @@ public class Controlador {
         double totalHerbivoros = Persistencia.getTotalComida(TipoAlimentacion.HERBIVORO);
         return new ComidaViewModel(totalCarnivoros, totalHerbivoros);
     }
+
+  
 }

@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package views;
 
-/**
- *
- * @author Fernando
- */
+
 public interface VMP {
+    public static String OPC_GUARDAR = "guardar nuevo animal";
+    public static String OPC_LISTAR = "listar animales";
+    public static String OPC_CALCULAR = "calcular comida";
     
+    public void ejecutar();
+    public void setControlador(Controlador control);
 }
