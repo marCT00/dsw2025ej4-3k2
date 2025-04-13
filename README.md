@@ -1,2 +1,10 @@
-# dsw2025ej4
-Desarrollo de Software - Ejercicio N° 4
+
+Desarrollo de Software - 2025
+
+Ejercicio N°4 - Control de Versiones
+
+Integrantes
+
+1# 53441 - Saavedra, Mariana - ingmarsaave@gmail.com
+2# 56192 - Jimenez, Fernando Emanuel - fernandojimenez064@gmail.com
+3# 53477 - Toledo, Genaro - genaro.toledo@alu.frt.utn.edu.ar
