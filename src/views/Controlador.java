@@ -12,6 +12,7 @@ import java.util.List;
 public class Controlador implements ActionListener {
     private MenuPrincipal mp = new MenuPrincipal();
     private VLA vl = new VistaListar(null,true);
+    private VCA va = new ListarAnimalesView();
     
       @Override
     public void actionPerformed(ActionEvent e) {
@@ -29,6 +30,8 @@ public class Controlador implements ActionListener {
        }
        
        if(e.getActionCommand().equals(mp.OPC_CALCULAR)){
+           va.ejecutar();
+           
            System.out.println("Opcion calcular alimentos");
        }
     }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 
-public class ListarAnimalesView extends javax.swing.JFrame{
+public class ListarAnimalesView extends javax.swing.JFrame implements VCA{
 
    
     public ListarAnimalesView() {
@@ -29,6 +29,10 @@ public class ListarAnimalesView extends javax.swing.JFrame{
         }
     }
 
+    
+    public void ejecutar(){
+     this.setVisible(true);
+    }
 
     
    
