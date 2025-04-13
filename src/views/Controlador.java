@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Controlador implements ActionListener {
     private MenuPrincipal mp = new MenuPrincipal();
+    private VLA vl = new VistaListar(null,true);
     
       @Override
     public void actionPerformed(ActionEvent e) {
@@ -19,7 +20,12 @@ public class Controlador implements ActionListener {
        }
        
        if(e.getActionCommand().equals(mp.OPC_LISTAR)){
+           ArrayList<Mamifero> datos = Persistencia.getAnimales();
+           
            System.out.println("Opciona listar animales");
+           
+           vl.setControlador(this);
+           vl.ejecutar();
        }
        
        if(e.getActionCommand().equals(mp.OPC_CALCULAR)){
