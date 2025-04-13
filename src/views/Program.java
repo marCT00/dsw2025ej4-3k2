@@ -12,6 +12,7 @@ public class Program {
         Persistencia.inicializar();
         Controlador control = new Controlador();
         control.ejecutar();
+        System.out.println("hola");
 
        // ListarAnimalesView view = new ListarAnimalesView();
        // view.setVisible(true);

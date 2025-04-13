@@ -1,6 +1,9 @@
 
 package views;
 
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 
 public class VistaListar extends javax.swing.JDialog implements VLA {
 
@@ -20,6 +23,17 @@ public class VistaListar extends javax.swing.JDialog implements VLA {
     public void setControlador(Controlador control){
     
     }
+    
+    
+    public void cargarAnimales(ArrayList<String[]> datos){
+    DefaultTableModel m = (DefaultTableModel) jTable1.getModel();
+    m.setRowCount(0);
+    
+    for(String [] filas : datos){
+     m.addRow(filas);
+    }
+    }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -31,8 +45,6 @@ public class VistaListar extends javax.swing.JDialog implements VLA {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("asd");
-
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -41,7 +53,7 @@ public class VistaListar extends javax.swing.JDialog implements VLA {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Especie", "Edad", "Peso", "Alimentacion"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -67,7 +79,7 @@ public class VistaListar extends javax.swing.JDialog implements VLA {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();

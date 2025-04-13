@@ -20,7 +20,7 @@ public class Controlador implements ActionListener {
        }
        
        if(e.getActionCommand().equals(mp.OPC_LISTAR)){
-           ArrayList<Mamifero> datos = Persistencia.getAnimales();
+           vl.cargarAnimales(obtenerLista());
            
            System.out.println("Opciona listar animales");
            
@@ -38,7 +38,20 @@ public class Controlador implements ActionListener {
      mp.ejecutar();
     }
     
-    
+      public ArrayList<String[]> obtenerLista (){
+         ArrayList<String[]> datos = new ArrayList<>();
+         for(Mamifero a : Persistencia.getAnimales()){
+         String[] fila = {
+            a.getEspecie().getNombre(),
+            String.valueOf(a.getEdad()),
+            String.valueOf(a.getPeso()),
+            String.valueOf(a.getTipoAlimentacion()),
+            String.valueOf(a.getSector().getNumero())
+         };
+         datos.add(fila);
+         }
+         return datos;
+      }
     
     public static TipoAlimentacion[] getTiposAlimentacion(){
         return  TipoAlimentacion.values();

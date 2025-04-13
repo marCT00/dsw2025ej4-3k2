@@ -5,6 +5,8 @@
  */
 package views;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Fernando
@@ -12,4 +14,5 @@ package views;
 public interface VLA {
     public void ejecutar();
     public void setControlador(Controlador control);
+    public void cargarAnimales(ArrayList<String[]> datos);
 }
