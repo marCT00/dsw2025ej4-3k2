@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 
-public class VistaListar extends javax.swing.JDialog implements VLA {
+public class VistaListar extends javax.swing.JDialog implements IVL {
 
 
     public VistaListar(java.awt.Frame parent, boolean modal) {
